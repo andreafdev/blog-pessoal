@@ -22,12 +22,18 @@ import jakarta.validation.constraints.Size;
 public class Postagem {
 
 	
-	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	@NotBlank(message= "O atributo título é obrigatório!")
 	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 5 e no máximo 100 caracteres ")
 	private String titulo;
@@ -42,6 +48,10 @@ public class Postagem {
 	@ManyToOne	
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
+	
+	@ManyToOne
+    @JsonIgnoreProperties("postagem")
+    private Usuario usuario;
 
 	public Long getId() {
 		return id;

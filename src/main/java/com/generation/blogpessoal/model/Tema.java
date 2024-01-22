@@ -27,7 +27,7 @@ public class Tema {
 	private String descricao;
 	
 
-	@OneToMany	(fetch = FetchType.LAZY, mappedBy = "Tema", cascade = CascadeType.REMOVE)
+	@OneToMany	(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
 	private  List <Postagem> postagem;
 
