@@ -95,11 +95,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.gerenation</groupId>
-			<artifactId>bsm</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
 	</dependencies>
 
